@@ -35,7 +35,10 @@ public class EmailService {
         msg.setText(dto.getMessage());
 
         javaMailSender.send(msg);
+
         emailRepository.save(Mail.of(dto));
+
+
 
     }
 
